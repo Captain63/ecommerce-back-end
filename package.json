@@ -1,0 +1,32 @@
+{
+  "name": "ecommerce-back-end",
+  "version": "1.0.0",
+  "description": "E-commerce back end run using MySQL database and Sequelize Node.js package.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Captain63/ecommerce-back-end.git"
+  },
+  "keywords": [],
+  "author": "Stephen Roddewig (Captain63)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Captain63/ecommerce-back-end/issues"
+  },
+  "homepage": "https://github.com/Captain63/ecommerce-back-end#readme",
+  "dependencies": {
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

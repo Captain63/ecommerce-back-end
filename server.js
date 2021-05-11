@@ -1,7 +1,7 @@
 // Import modules
 const express = require('express');
 const routes = require('./routes');
-const sequelize = require("sequelize");
+const sequelize = require("./config/connection");
 
 // Initialize express app
 const app = express();
@@ -16,6 +16,6 @@ app.use(routes);
 
 // Launch server to begin listening for requests
 // NOTE -- update to force: false before deploying to production
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
 });

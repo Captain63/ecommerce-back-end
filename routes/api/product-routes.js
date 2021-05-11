@@ -2,10 +2,10 @@ const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // Get all products
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const productData = await Product.findAll({
-      include: [{ model: Category, model: Tag }]
+      include: [{ model: Tag, through: ProductTag, as: 'tags' }]
     })
     res.status(200).json(productData);
   } catch (err) {
@@ -14,10 +14,10 @@ router.get('/', (req, res) => {
 });
 
 // Find product based on its id
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id, {
-      include: [{ model: Product, model: Tag }]
+      include: [{ model: Tag, through: ProductTag, as: 'tags' }]
     })
 
     // If no data returned

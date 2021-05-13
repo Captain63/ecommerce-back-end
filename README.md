@@ -29,12 +29,12 @@ Then, make sure to update [.env.EXAMPLE](./.env.EXAMPLE) to hold your specific S
 Then, create the SQL database by running the commands in [schema.sql](./db/schema.sql). Next, seed the data by running command "npm run seed" in command line to add test data to the database. You should now be ready to launch the application by running command "npm start."
 
 ## Demo
-[View the demonstration video on YouTube]()
+[View the demonstration video on YouTube](https://youtu.be/7qYkzvuhWlI)
 
 ## License
 Permission is hereby granted, free of charge, to any person obtaining a copy of this Software and associated documentation files (the "Software"), to deal in the Software without  restriction, including without limitation the rights to use, copy, modify, merge, publish distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions.
 
-[View the full license](./LICENSE).
+[View the full license](./LICENSE)
 
 ## Screenshots
 ![Application initialized in Git Bash](./images/initialization.png)
